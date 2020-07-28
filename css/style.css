@@ -1,3 +1,142 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
 body{
+	font-family: "Barlow", sans-serif;
+	background: #12151a;
+	line-height: 1.5;
+	color:#333;
+	font-size: 15px;
+}
+.container{
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/*	header	*/
+
+.header{
+	position: fixed;
+	width: 100%;
+	height: auto;
+	background: #212529;
+	opacity: 0.8;
+	z-index: 3;
+}
+.header .container{
+	display:flex;
+	vertical-align: top;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2vh 0;
+}
+.logo{
+	font-size:24px; 
+}
+.logo:after{
+	content: '';
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
 	background-color: red;
+	display: inline-block;
+}
+.header a{
+	text-decoration: none;
+	color:white;
+}
+
+/*	nav	*/
+
+.nav{
+	text-transform: uppercase;
+}
+.nav__link{
+	display: inline-block;
+	font-size: 12px;
+	margin: 0 10px;
+
+	transition: color 0.1s linear;
+}
+.nav__link:hover{
+	color:red;
+}
+
+.main_btn{
+	padding: 15px 25px;
+	cursor: pointer;
+	background-color: red;
+	color:white;
+	border:0;
+	text-decoration: none;
+	line-height: 1.2;
+	transition: background-color 0.2s linear;
+}
+.main_btn:hover{
+	background-color: white;
+	color:black;
+}
+
+/*	Intro	*/
+
+.intro{
+	width: 100%;
+	height: 100vh;	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background:url("../img/intro.jpg") center no-repeat;
+	z-index: 1;
+}
+.intro:after{
+	content: '';
+	position: absolute;
+	top:0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgb(0,0,0);
+	opacity: 0.5;
+	z-index: 2;
+}
+.intro h1{
+	position:relative;
+	color:white;
+	vertical-align: middle;
+	z-index: 3;
+}
+
+.welcome__text{
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 25px;
+	font-weight: 1.2;
+	position: relative;
+}
+.welcome__text:before{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 70%;
+	left: 0;
+	bottom: 0;
+	background:url('../img/intro_line.png') left no-repeat;
+}
+.welcome__text2{
+    font-family: "Barlow Condensed", sans-serif;
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 32px;
+	font-weight: 600;
+    text-transform: capitalize;
+	padding: 30px 0;
 }
